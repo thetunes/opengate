@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="src/css/main.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
-</head>
+    <script src="./js/login.js"></script>
+  </head>
 <body>
     <div id="hasphonenumber" class="w-full h-screen flex items-center justify-center">
-        <div class="w-96 bg-stone-950 rounded-xl">
+        <div class="w-96 bg-stone-950 rounded-3xl">
             <div class="">
-                <p class="font-extrabold px-8 pt-6">LOGIN</p>
+                <p class="font-extrabold px-8 pt-8 text-xl">Log In</p>
                 <form class="shadow-md rounded px-8 pt-6 pb-8 mb-4">
                   <div class="mb-4">
                     <label class="block text-whilte text-sm font-bold mb-2" for="username">
@@ -27,7 +28,7 @@
                     <input class="shadow appearance-none bg-stone-700 rounded-xl w-full py-2 px-3 text-whilte mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************">
                   </div>
                   <div class="flex items-center justify-between">
-                    <button class="bg-white hover:bg-stone-100 text-stone-950 font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline" type="button">
+                    <button onclick="loginUser()" class="bg-white hover:bg-stone-100 text-stone-950 font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline" type="button">
                       Sign In
                     </button>
                     <a class="inline-block align-baseline font-bold text-sm text-stone-200 hover:text-stone-400" href="#">
