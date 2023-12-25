@@ -32,8 +32,25 @@ async function loginUser() {
             window.location.href = 'https://tunes.herobuxx.me';
         } else {
             console.error('Token is undefined. Login failed.');
+            // Display error message in the "notifier" div
+            const notifierDiv = document.getElementById('notifier');
+            if (notifierDiv) {
+                const errorMessageDiv = document.createElement('div');
+                errorMessageDiv.className = 'bg-red-600 my-4 mx-4 h-10 flex items-center justify-center rounded-md';
+                errorMessageDiv.innerHTML = '<p class="text-center">Incorrect Login information!</p>';
+                notifierDiv.appendChild(errorMessageDiv);
+            }
         }
     } catch (error) {
         console.error('Error during login:', error.message);
+
+        // Display error message in the "notifier" div
+        const notifierDiv = document.getElementById('notifier');
+        if (notifierDiv) {
+            const errorMessageDiv = document.createElement('div');
+            errorMessageDiv.className = 'bg-red-600 my-4 mx-4 h-10 flex items-center justify-center rounded-md';
+            errorMessageDiv.innerHTML = '<p class="text-center">Incorrect Login information!</p>';
+            notifierDiv.appendChild(errorMessageDiv);
+        }
     }
 }
