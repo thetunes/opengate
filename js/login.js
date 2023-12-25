@@ -1,7 +1,6 @@
 async function loginUser() {
     // Local Host
-    //const Url = 'http://localhost:8080/http://c.aether.herobuxx.me/api/login/auth';
-    const Url = 'https://eclipse.herobuxx.me/api/login/auth';
+    const Url = 'https://eclipse.herobuxx.me/api/auth';
 
     // Get values from input elements
     const username = document.getElementById('username').value;
