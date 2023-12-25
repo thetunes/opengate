@@ -25,11 +25,14 @@ async function loginUser() {
         // Assuming the response contains a token
         const token = responseData.token;
 
-        // Set the token in a cookie
-        document.cookie = `token=${token}; expires=${new Date(responseData.expiresIn)}; path=/`;
-
-        console.log('Login successful');
-        window.location.href = 'https://tunes.herobuxx.me';
+        if (token !== undefined) {
+            // Set the token in a cookie
+            document.cookie = `token=${token}; expires=${new Date(responseData.expiresIn)}; path=/`;
+            console.log('Login successful');
+            window.location.href = 'https://tunes.herobuxx.me';
+        } else {
+            console.error('Token is undefined. Login failed.');
+        }
     } catch (error) {
         console.error('Error during login:', error.message);
     }
