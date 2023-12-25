@@ -30,6 +30,7 @@ async function loginUser() {
         document.cookie = `token=${token}; expires=${new Date(responseData.expiresIn)}; path=/`;
 
         console.log('Login successful');
+        window.location.href = 'https://tunes.herobuxx.me';
     } catch (error) {
         console.error('Error during login:', error.message);
     }
