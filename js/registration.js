@@ -26,6 +26,7 @@ async function loginUser() {
 
         // Assuming the response contains a token
         const status = responseData.status;
+        const message = responseData.message;
         const success = 'success'; // Add this line to define the success variable
 
         if (status !== success) {
@@ -35,7 +36,7 @@ async function loginUser() {
             if (notifierDiv) {
                 const errorMessageDiv = document.createElement('div');
                 errorMessageDiv.className = 'bg-red-600 my-4 mx-4 h-10 flex items-center justify-center rounded-md';
-                errorMessageDiv.innerHTML = '<p class="text-center">Resgistration failed, try again!</p>';
+                errorMessageDiv.innerHTML = `<p class="${message}"></p>`;
                 notifierDiv.appendChild(errorMessageDiv);
             }
         } else {
