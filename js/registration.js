@@ -1,6 +1,6 @@
 async function loginUser() {
     // Local Host
-    const Url = 'https://eclipse.herobuxx.me/api/user';
+    const Url = 'https://eclipse.herobuxx.me/api/admin';
 
     // Get values from input elements
     const email = document.getElementById('email').value;
@@ -41,7 +41,7 @@ async function loginUser() {
             }
         } else {
             console.log('Registration succeed');
-            window.location.href = 'https://tunes.herobuxx.me/login';
+            window.location.href = 'https://tunes.herobuxx.me/gate';
         }
     } catch (error) {
         console.error('Error during registration:', error.message);
